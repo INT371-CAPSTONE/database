@@ -10,72 +10,104 @@ INSERT INTO admin_profile
 ('sasit_3', 'admin', 'sasit3_admin', 'admin123');
 
 -- insert classes_supervisor
+INSERT INTO classes_supervisor VALUES
+(001,3);
+INSERT INTO classes_supervisor VALUES
+(002,1);
+INSERT INTO classes_supervisor VALUES
+(002,3);
+INSERT INTO classes_supervisor VALUES
+(003,3);
+INSERT INTO classes_supervisor VALUES
+(004,3);
+INSERT INTO classes_supervisor VALUES
+(005,3);
+INSERT INTO classes_supervisor VALUES
+(006,3);
 
+-- insert enrollments
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500039, 1);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500039, 2);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500039, 3);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500039, 4);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500039, 5);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500039, 6);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500039, 7);
 
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500086, 1);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500086, 2);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500086, 3);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500086, 4);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500086, 5);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500086, 6);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500086, 7);
 
--- insert enrollment
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500039,"INT510",2566,1,1);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500039,"INT371",2566,1,1);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500039,"GEN224",2566,1,1);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500039,"LNG224",2566,1,1);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500039,"LNG304",2566,2,1);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500039,"INT308",2566,2,1);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500039,"GEN351",2566,2,1);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500105, 1);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500105, 2);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500105, 3);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500105, 4);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500105, 5);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500105, 6);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500105, 7);
 
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500086,"INT510",2566,1,2);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500086,"INT371",2566,1,2);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500086,"GEN224",2566,1,2);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500086,"LNG224",2566,1,2);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500086,"LNG304",2566,2,2);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500086,"INT308",2566,2,2);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500086,"GEN351",2566,2,2);
-
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500105,"INT510",2566,1,2);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500105,"INT371",2566,1,2);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500105,"GEN224",2566,1,2);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500105,"LNG224",2566,1,2);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500105,"LNG304",2566,2,2);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500105,"INT308",2566,2,2);
-INSERT INTO enrollment (`student_profile_std_id`,`subject_subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-(63130500105,"GEN351",2566,2,2);
+-- insert classes
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT510",2566,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("GEN224",2566,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT371",2566,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG224",2566,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT308",2565,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("GEN351",2565,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG304",2565,2,1);
 
 -- insert lecture
 INSERT INTO lecturer
-VALUES (1, "pichet", "limvajiranan" );
+VALUES (001, "pichet", "limvajiranan" );
 INSERT INTO lecturer
-VALUES (2, "OLARN", "ROJANAPORNPUN" );
+VALUES (002, "OLARN", "ROJANAPORNPUN" );
 INSERT INTO lecturer
-VALUES (3, "SUNISA", "SATHAPORNVAJANA" );
+VALUES (003, "SUNISA", "SATHAPORNVAJANA" );
 INSERT INTO lecturer
-VALUES (4, "UMAPORN", "SUPASITTHIMETHEE" );
+VALUES (004, "UMAPORN", "SUPASITTHIMETHEE" );
 INSERT INTO lecturer
-VALUES (5, "SIAM", "YAMSAENGSUNG" );
+VALUES (005, "SIAM", "YAMSAENGSUNG" );
 INSERT INTO lecturer
-VALUES (6, "Nantapong", "Keandoungchun" );
+VALUES (006, "Nantapong", "Keandoungchun" );
+
 -- insert scores
-select * from enrollment;
-INSERT INTO scores (`class_id`,`scores`,`note`,`title_title_id`,`last_update`)
-VALUES (1,9.99,"ทดลองระบบ",1, now());
+INSERT INTO scores (`scores`,`note`,`title_id`,`last_update`,`enrollment_id`)
+VALUES (9.99,"ทดลองระบบ",1, now(),1);
+INSERT INTO scores (`scores`,`title_id`,`last_update`,`enrollment_id`)
+VALUES (10.00,1, now(),3);
+INSERT INTO scores (`scores`,`note`,`title_id`,`last_update`,`enrollment_id`)
+VALUES (8.75,"ทดลองระบบ123",1, now(),8);
 
 -- insert staff_profile
 INSERT INTO staff_profile
@@ -85,8 +117,21 @@ VALUES (02, "staff_2", "sasit" );
 INSERT INTO staff_profile
 VALUES (03, "staff_3", "sasit" );
 
--- insert staff_supervisorstudent_profile
-
+-- insert staff_supervisor
+INSERT INTO staff_supervisor
+VALUES (1,002);
+INSERT INTO staff_supervisor
+VALUES (3,001);
+INSERT INTO staff_supervisor
+VALUES (3,002);
+INSERT INTO staff_supervisor
+VALUES (3,003);
+INSERT INTO staff_supervisor
+VALUES (3,004);
+INSERT INTO staff_supervisor
+VALUES (3,005);
+INSERT INTO staff_supervisor
+VALUES (3,006);
 
 -- insert student_profile
 select * from student_profile;
@@ -98,6 +143,7 @@ INSERT INTO student_profile
 VALUES (63130500105, "wareewan", "pongpunchaikul" ,"IT" ,"wareewan.band@mail.kmutt.ac.th");
 
 -- insert subject
+select * from subject;
 INSERT INTO subject
 VALUES ("INT510", "Selected Topic in Software Development: Agile Software Develop","-");
 INSERT INTO subject
@@ -115,7 +161,7 @@ VALUES ("LNG304", "MEETING AND DISCUSSIONS","รายวิชานี้เ�
 
 -- insert title
 INSERT INTO title (`title`)
-VALUES ("การสอบเก็บคะแนนวิชาINT510 ครั้งที่ 1 จะเก็บ 15%");
+VALUES ("การสอบเก็บคะแนนวิชาINT510 ครั้งที่1 จะเก็บ15%");
 INSERT INTO title (`title`)
 VALUES ("1st gen224 subject scoring exam");
 INSERT INTO title (`title`)
