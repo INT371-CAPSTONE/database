@@ -182,7 +182,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- insert student_profile
 INSERT INTO student_profile
-VALUES (63130500039, "nattakorn", "chotpattarajinda" ,"IT" ,"nattakorn.lol@mail.kmutt.ac.th");
+VALUES (63130500029, "nattakorn", "chotpattarajinda" ,"IT" ,"nattakorn.lol@mail.kmutt.ac.th");
 INSERT INTO student_profile
 VALUES (63130500086, "pichaya", "pairin" ,"IT" ,"pichaya.game@mail.kmutt.ac.th");
 INSERT INTO student_profile
