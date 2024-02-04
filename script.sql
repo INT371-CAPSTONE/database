@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `sasit`.`scores` (
   `note` VARCHAR(400) NULL,
   `score_id` INT NOT NULL AUTO_INCREMENT,
   `title_id` INT NOT NULL,
-  `last_update` DATETIME NOT NULL,
+  `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `std_id` BIGINT(20) NOT NULL,
   `class_id` INT NOT NULL,
   PRIMARY KEY (`score_id`),
@@ -200,6 +200,8 @@ INSERT INTO student_profile
 VALUES (63130500086, "pichaya", "pairin" ,"IT" ,"pichaya.game@mail.kmutt.ac.th");
 INSERT INTO student_profile
 VALUES (63130500105, "wareewan", "pongpunchaikul" ,"IT" ,"wareewan.band@mail.kmutt.ac.th");
+INSERT INTO student_profile
+VALUES (63130500144, "phuchit", "uappapunsetty" ,"IT" ,"phuchit.yeti@mail.kmutt.ac.th");
 -- insert lecture
 INSERT INTO lecturer
 VALUES (001, "pichet", "limvajiranan" );
@@ -240,7 +242,7 @@ VALUES ("GEN224", "LIVEABLE CITY","รายวิชานี้มุ่งเ
 INSERT INTO subject
 VALUES ("LNG224", "ORAL COMMUNICATION I" ,"รายวิชานี้มุ่งเน้นให้นักศึกษาเสริมสร้างความมั่นใจในการสื่อสารภาษาอังกฤษในชีวิตประจำวัน นักศึกษาพัฒนาทักษะการพูดผ่านการทำงานเดี่ยว งานคู่ และงานกลุ่ม ผ่านกิจกรรมต่างๆ อาทิเช่น การพูดนำเสนอผลงาน การแสดงบทบาทสมมติ และการถกเถียงแลกเปลี่ยนความคิดเห็น ในการพัฒนาทักษะการฟัง นักศึกษาจะได้ฝึกฝนการระบุข้อมูลจากการฟังจากอุปกรณ์บันทึกเสียงที่เป็นบทสนทนาในชีวิตประจำวัน สารคดี หรือการสอนการบรรยายในหัวข้อทั่วไป การฟังจากสื่อเหล่านี้จะเป็นต้นแบบในการฝึกพูดด้วยเช่นกัน");
 INSERT INTO subject
-VALUES ("GEN351", "MODERN MANAGEMENT AND LEADERSHI","This course examines the modern management concept including basic functions of managementplanning, organizing, controlling, decision-making, communication, motivation, leadership, human resource management, management of information systems, social responsibilityand its application to particular circumstances.");
+VALUES ("GEN351", "MODERN MANAGEMENT AND LEADERSHIP","This course examines the modern management concept including basic functions of managementplanning, organizing, controlling, decision-making, communication, motivation, leadership, human resource management, management of information systems, social responsibilityand its application to particular circumstances.");
 INSERT INTO subject
 VALUES ("INT308", "SECURITY II","บริการด้านความมั่นคง กลไกและมาตรการตอบโต้การบุกรุก คุณสมบัติด้านความมั่นคง ลักษณะการบุกรุกและวิธีตรวจสอบ ระบบที่เชื่อมั่นได้สูง จุดอ่อน การคุกคามและความเสี่ยง การเข้ารหัสลับเบื้องต้น จุดอ่อนของระบบเว็บและโมบาย");
 INSERT INTO subject
@@ -310,13 +312,23 @@ INSERT INTO enrollments (`student_id`, `class_id`) VALUES
 (63130500105, 6);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
 (63130500105, 7);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500144, 2);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500144, 4);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500144, 6);
 -- insert scores
-INSERT INTO scores (`scores`,`note`,`title_id`,`last_update`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1, now(),63130500029,1);
-INSERT INTO scores (`scores`,`note`,`title_id`,`last_update`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1, now(),63130500086,1);
-INSERT INTO scores (`scores`,`note`,`title_id`,`last_update`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1, now(),63130500105,1);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (9.99,"ทดลองระบบ",1,63130500029,1);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (9.99,"ทดลองระบบ",1,63130500086,1);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (9.99,"ทดลองระบบ",1,63130500105,1);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (10,"test",2,63130500105,2);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (9.99,"ทดลองระบบ",1,63130500144,1);
 -- insert classes_supervisor
 INSERT INTO classes_supervisor VALUES
 (001,3);
@@ -347,4 +359,3 @@ INSERT INTO staff_supervisor
 VALUES (6,03);
 INSERT INTO staff_supervisor
 VALUES (7,01);
-
