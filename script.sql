@@ -6,10 +6,10 @@ FLUSH PRIVILEGES;
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
 
-SET time_zone = '+07:00';
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+SET time_zone = '+07:00';
 -- -----------------------------------------------------
 -- Schema sasit
 -- -----------------------------------------------------
@@ -77,6 +77,7 @@ CREATE TABLE IF NOT EXISTS `sasit`.`title` (
   `title_id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(45) NOT NULL,
   `title_description` VARCHAR(100) NULL,
+  `full_score` FLOAT NOT NULL,
   PRIMARY KEY (`title_id`))
 ENGINE = InnoDB;
 -- -----------------------------------------------------
@@ -148,7 +149,6 @@ CREATE TABLE IF NOT EXISTS `sasit`.`enrollments` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 -- -----------------------------------------------------
 -- Table `sasit`.`classes_supervisor`
 -- -----------------------------------------------------
@@ -193,28 +193,45 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
 -- insert student_profile
 INSERT INTO student_profile
-VALUES (63130500029, "nattakorn", "chotpattarajinda" ,"IT" ,"nattakorn.lol@mail.kmutt.ac.th");
+VALUES (63130500086, "Pichaya", "Pairin" ,"IT" ,"pichaya.game@mail.kmutt.ac.th");
 INSERT INTO student_profile
-VALUES (63130500086, "pichaya", "pairin" ,"IT" ,"pichaya.game@mail.kmutt.ac.th");
+VALUES (63130500105, "Wareewan", "Pongpunchaikul" ,"IT" ,"wareewan.band@mail.kmutt.ac.th");
 INSERT INTO student_profile
-VALUES (63130500105, "wareewan", "pongpunchaikul" ,"IT" ,"wareewan.band@mail.kmutt.ac.th");
+VALUES (63130500144, "Phuchit", "Uappapunsetty" ,"IT" ,"phuchit.yeti@mail.kmutt.ac.th");
 INSERT INTO student_profile
-VALUES (63130500144, "phuchit", "uappapunsetty" ,"IT" ,"phuchit.yeti@mail.kmutt.ac.th");
+VALUES (63130500119, "Siraphop", "Pattaragatewit" ,"IT" ,"siraphop.p@mail.kmutt.ac.th");
+INSERT INTO student_profile
+VALUES (63130500082, "Piyamon", "Suddee" ,"IT" ,"piyamon.test@mail.kmutt.ac.th");
+INSERT INTO student_profile
+VALUES (63130500116, "Sarisa ", "Phulakorn" ,"IT" ,"sarisa.beam@mail.kmutt.ac.th");
+INSERT INTO student_profile	
+VALUES (63130500117, "Siraphop", "Chaitiumwong" ,"IT" ,"sirapope.c@mail.kmutt.ac.th");
+INSERT INTO student_profile	
+VALUES (63130500121, "SUTHIPONG", "SHANAMOON" ,"IT" ,"suthipong.tod@mail.kmutt.ac.th");
+INSERT INTO student_profile	
+VALUES (63130500123, "SUPICHAYA", "MUENNUCH" ,"IT" ,"supichaya.sit@mail.kmutt.ac.th");
+INSERT INTO student_profile	
+VALUES (63130500134, "Arisa", "Audomkhachonkitti" ,"IT" ,"suthipong.tod@mail.kmutt.ac.th");
+INSERT INTO student_profile	
+VALUES (63130500090, "Pataradanai", "Deeruksa" ,"IT" ,"Pataradanai.Deeruksa@mail.kmutt.ac.th");
 -- insert lecture
 INSERT INTO lecturer
-VALUES (001, "pichet", "limvajiranan" );
+VALUES (1001, "pichet", "limvajiranan" );
 INSERT INTO lecturer
-VALUES (002, "OLARN", "ROJANAPORNPUN" );
+VALUES (1002, "OLARN", "ROJANAPORNPUN" );
 INSERT INTO lecturer
-VALUES (003, "SUNISA", "SATHAPORNVAJANA" );
+VALUES (1003, "SUNISA", "SATHAPORNVAJANA" );
 INSERT INTO lecturer
-VALUES (004, "UMAPORN", "SUPASITTHIMETHEE" );
+VALUES (1004, "UMAPORN", "SUPASITTHIMETHEE" );
 INSERT INTO lecturer
-VALUES (005, "SIAM", "YAMSAENGSUNG" );
+VALUES (1005, "SIAM", "YAMSAENGSUNG" );
 INSERT INTO lecturer
-VALUES (006, "Nantapong", "Keandoungchun" );
+VALUES (1006, "Nantapong", "Keandoungchun" );
+INSERT INTO lecturer
+VALUES (63130500029, "nattakorn", "chotpattarajinda");
 -- insert staff_profile
 INSERT INTO staff_profile
 VALUES (01, "staff_1", "sasit" );
@@ -263,27 +280,17 @@ INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES
 INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
 ("LNG304",2565,2,1);
 -- insert title
-INSERT INTO title (`title`,`title_description`)
-VALUES ("การสอบเก็บคะแนนวิชาINT510 ครั้งที่1","เก็บ 15%");
-INSERT INTO title (`title`,`title_description`)
-VALUES ("1st gen224 subject scoring exam","-");
-INSERT INTO title (`title`,`title_description`)
-VALUES ("2rd INT371 subject scoring exam","-");
+INSERT INTO title (`title`,`title_description`,`full_score`)
+VALUES ("การสอบเก็บคะแนนวิชาINT510 ครั้งที่1","เก็บ 15%",100);
+INSERT INTO title (`title`,`title_description`,`full_score`)
+VALUES ("quiz 1","-",5);
+INSERT INTO title (`title`,`title_description`,`full_score`)
+VALUES ("test exam-1","-",100);
+INSERT INTO title (`title`,`title_description`,`full_score`)
+VALUES ("quiz 1.1","-",10);
+INSERT INTO title (`title`,`title_description`,`full_score`)
+VALUES ("exam quiz DES","-",20);
 -- insert enrollments
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500029, 1);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500029, 2);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500029, 3);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500029, 4);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500029, 5);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500029, 6);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500029, 7);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
 (63130500086, 1);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
@@ -318,32 +325,170 @@ INSERT INTO enrollments (`student_id`, `class_id`) VALUES
 (63130500144, 4);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
 (63130500144, 6);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500119, 1);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500119, 2);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500119, 3);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500119, 5);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500119, 7);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500082, 1);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500082, 3);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500082, 5);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500082, 6);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500116, 1);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500116, 2);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500116, 4);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500116, 6);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500123, 1);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500123, 2);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500123, 4);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500123, 6);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500123, 7);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500117, 1);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500117, 2);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500117, 3);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500121, 4);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500121, 5);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500121, 6);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500121, 7);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500134, 1);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500134, 2);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500134, 4);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500134, 6);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500090, 1);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500090, 2);
+INSERT INTO enrollments (`student_id`, `class_id`) VALUES
+(63130500090, 3);
 -- insert scores
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1,63130500029,1);
+VALUES (9.99,"ทดลองระบบ",1,63130500119,1);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (9.99,"ทดลองระบบ",1,63130500082,1);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (9.99,"ทดลองระบบ",1,63130500116,1);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (9.99,"ทดลองระบบ",1,63130500123,1);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (9.99,"ทดลองระบบ",1,63130500117,1);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (9.99,"ทดลองระบบ",1,63130500090,1);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
 VALUES (9.99,"ทดลองระบบ",1,63130500086,1);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
 VALUES (9.99,"ทดลองระบบ",1,63130500105,1);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (10,"test",2,63130500105,2);
+VALUES (5,"quiz 1 full score = 5 ",2,63130500119,2);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1,63130500144,1);
+VALUES (4,"quiz 1 full score = 5",2,63130500116,2);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (3,"quiz 1 full score = 5",2,63130500123,2);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (2,"quiz 1 full score = 5",2,63130500117,2);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (1,"quiz 1 full score = 5",2,63130500134,2);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (3.5,"quiz 1 full score = 5",2,63130500090,2);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (2,"quiz 1 full score = 5 ",2,63130500086,2);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (0.5,"quiz 1 full score = 5 ",2,63130500105,2);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (2.75,"quiz 1 full score = 5 ",2,63130500144,2);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (10,"test from exam-1",3,63130500119,3);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (10,"test from exam-1",3,63130500082,3);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (10,"test from exam-1",3,63130500082,3);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (10,"test from exam-1",3,63130500117,3);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (10,"test from exam-1",3,63130500090,3);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (10,"test from exam-1",3,63130500086,3);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (10,"test from exam-1",3,63130500105,3);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (5,"quiz 1.1 full score = 10",4,63130500116,4);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (7,"quiz 1.1 full score = 10",4,63130500123,4);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (1,"quiz 1.1 full score = 10",4,63130500121,4);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (9,"quiz 1.1 full score = 10",4,63130500134,4);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (10,"quiz 1.1 full score = 10",4,63130500086,4);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (7,"quiz 1.1 full score = 10",4,63130500105,4);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (0.75,"quiz 1.1 full score = 10",4,63130500144,4);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (7,"exam quiz DES full = 20",5,63130500105,5);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (20,"exam quiz DES full = 20",5,63130500086,5);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (10.5,"exam quiz DES full = 20",5,63130500119,5);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (4,"exam quiz DES full = 20",5,63130500082,5);
+INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
+VALUES (0,"exam quiz DES full = 20",5,63130500121,5);
 -- insert classes_supervisor
 INSERT INTO classes_supervisor VALUES
-(001,3);
+(1001,3);
 INSERT INTO classes_supervisor VALUES
-(002,1);
+(1002,1);
 INSERT INTO classes_supervisor VALUES
-(002,3);
+(1002,3);
 INSERT INTO classes_supervisor VALUES
-(003,3);
+(1003,3);
 INSERT INTO classes_supervisor VALUES
-(004,3);
+(1003,4);
 INSERT INTO classes_supervisor VALUES
-(005,3);
+(1004,3);
 INSERT INTO classes_supervisor VALUES
-(006,3);
+(1004,5);
+INSERT INTO classes_supervisor VALUES
+(1005,3);
+INSERT INTO classes_supervisor VALUES
+(1006,3);
+INSERT INTO classes_supervisor VALUES
+(63130500029,1);
+INSERT INTO classes_supervisor VALUES
+(63130500029,2);
+INSERT INTO classes_supervisor VALUES
+(63130500029,3);
+INSERT INTO classes_supervisor VALUES
+(63130500029,5);
 -- insert staff_supervisor
 INSERT INTO staff_supervisor
 VALUES (1,01);
@@ -359,4 +504,3 @@ INSERT INTO staff_supervisor
 VALUES (6,03);
 INSERT INTO staff_supervisor
 VALUES (7,01);
-
