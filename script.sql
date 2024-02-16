@@ -576,7 +576,6 @@ INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES
 INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
 ("GEN351",2566,2,2);
 -- insert title
-select * from title;
 INSERT INTO title (`title`,`title_description`,`full_score`)
 VALUES ("การสอบเก็บคะแนนวิชา INT365/371", "ครั้งที่1 เก็บ15%",30);
 INSERT INTO title (`title`,`title_description`,`full_score`)
@@ -644,8 +643,6 @@ INSERT INTO enrollments (`student_id`, `class_id`) VALUES
 (63130500105, 107);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
 (63130500105, 110);
-select * from classes
-where subject_id = "INT308";
 -- insert scores
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
 VALUES (20,"-",1,63130500086,98);
