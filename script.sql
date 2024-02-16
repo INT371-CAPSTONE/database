@@ -208,8 +208,6 @@ VALUES (63130500082, "Piyamon", "Suddee" ,"IT" ,"piyamon.test@mail.kmutt.ac.th")
 INSERT INTO student_profile
 VALUES (63130500116, "Sarisa ", "Phulakorn" ,"IT" ,"sarisa.beam@mail.kmutt.ac.th");
 INSERT INTO student_profile	
-VALUES (63130500117, "Siraphop", "Chaitiumwong" ,"IT" ,"sirapope.c@mail.kmutt.ac.th");
-INSERT INTO student_profile	
 VALUES (63130500121, "SUTHIPONG", "SHANAMOON" ,"IT" ,"suthipong.tod@mail.kmutt.ac.th");
 INSERT INTO student_profile	
 VALUES (63130500123, "SUPICHAYA", "MUENNUCH" ,"IT" ,"supichaya.sit@mail.kmutt.ac.th");
@@ -234,11 +232,11 @@ INSERT INTO lecturer
 VALUES (63130500029, "nattakorn", "chotpattarajinda");
 -- insert staff_profile
 INSERT INTO staff_profile
-VALUES (01, "staff_1", "sasit" );
+VALUES (101, "staff_1", "sasit" );
 INSERT INTO staff_profile
-VALUES (02, "staff_2", "sasit" );
+VALUES (102, "staff_2", "sasit" );
 INSERT INTO staff_profile
-VALUES (03, "staff_3", "sasit" );
+VALUES (103, "staff_3", "sasit" );
 -- insert admin profile
 INSERT INTO admin_profile 
 (`admin_firstname`, `admin_lastname`, `admin_username`, `admin_password`) VALUES
@@ -251,256 +249,669 @@ INSERT INTO admin_profile
 ('sasit_3', 'admin', 'sasit3_admin', 'admin123');
 -- insert subject
 INSERT INTO subject
-VALUES ("INT510", "Selected Topic in Software Development: Agile Software Develop","-");
+VALUES ("INT100", "Information Technology Fundamentals","-");
 INSERT INTO subject
-VALUES ("INT371", "Capstone Project I","Information technology capstone project for the second semester of junior students; Information technology project proposal, feasibility study report, system analysis and design, implementation, report and project presentation");
+VALUES ("INT101", "Programming Fundamentals","-");
 INSERT INTO subject
-VALUES ("GEN224", "LIVEABLE CITY","รายวิชานี้มุ่งเน้นแนวคิดในการทำความเข้าใจและสร้างความตระหนักต่อสภาพปัญหาของเมืองความหลากหลายทางสังคมและวัฒนธรรมที่ดำรงอยู่ในเมือง และแนวทางในการสร้างเมืองน่าอยู่ที่จะมีส่วนสนับสนุนให้บัณฑิตของมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรีมีทัศคติและความตระหนักต่อการมีส่วนร่วมกับปัญหาของเมืองในฐานะพื้นที่การใช้ชีวิตตามหลากหลายทางสังคม นอกจากนี้ รายวิชานี้มีแนวคิดในการสร้างความเข้าใจและความตระหนักต่อเป้าหมาย");
+VALUES ("INT102", "Web Technology","-");
 INSERT INTO subject
-VALUES ("LNG224", "ORAL COMMUNICATION I" ,"รายวิชานี้มุ่งเน้นให้นักศึกษาเสริมสร้างความมั่นใจในการสื่อสารภาษาอังกฤษในชีวิตประจำวัน นักศึกษาพัฒนาทักษะการพูดผ่านการทำงานเดี่ยว งานคู่ และงานกลุ่ม ผ่านกิจกรรมต่างๆ อาทิเช่น การพูดนำเสนอผลงาน การแสดงบทบาทสมมติ และการถกเถียงแลกเปลี่ยนความคิดเห็น ในการพัฒนาทักษะการฟัง นักศึกษาจะได้ฝึกฝนการระบุข้อมูลจากการฟังจากอุปกรณ์บันทึกเสียงที่เป็นบทสนทนาในชีวิตประจำวัน สารคดี หรือการสอนการบรรยายในหัวข้อทั่วไป การฟังจากสื่อเหล่านี้จะเป็นต้นแบบในการฝึกพูดด้วยเช่นกัน");
+VALUES ("INT114", "Discrete Mathematics for Information Technology","-");
 INSERT INTO subject
-VALUES ("GEN351", "MODERN MANAGEMENT AND LEADERSHIP","This course examines the modern management concept including basic functions of managementplanning, organizing, controlling, decision-making, communication, motivation, leadership, human resource management, management of information systems, social responsibilityand its application to particular circumstances.");
+VALUES ("GEN101", "Physical Education","-");
+INSERT INTO subject
+VALUES ("GEN111", "Man and Ethics of Living","-");
+INSERT INTO subject
+VALUES ("LNG120", "General English","This course aims to strengthen the basic knowledge of English.");
+INSERT INTO subject
+VALUES ("LNG220", "Academic English","-");
+INSERT INTO subject
+VALUES ("INT103", "Advanced Programming","-");
+INSERT INTO subject
+VALUES ("INT104", "User Experience Design","-");
+INSERT INTO subject
+VALUES ("INT105", "Basic SQL","-");
+INSERT INTO subject
+VALUES ("INT107", "Computing Platforms Technology","-");
+INSERT INTO subject
+VALUES ("INT200", "Data Structures and Algorithms","-");
+INSERT INTO subject
+VALUES ("GEN121", "Learning and Problem Solving Skills","-");
+INSERT INTO subject
+VALUES ("LNG202", "Basic Reading for Science and Technology","-");
+INSERT INTO subject
+VALUES ("INT201", "Client-Side Web Programming I","-");
+INSERT INTO subject
+VALUES ("INT202", "Serevr-Side Web Programming I","-");
+INSERT INTO subject
+VALUES ("INT205", "Database Management System","-");
+INSERT INTO subject
+VALUES ("INT207", "Network I","-");
+INSERT INTO subject
+VALUES ("INT214", "Statistics for Information Technology","-");
+INSERT INTO subject
+VALUES ("GEN231", "Miracle of Thinking","-");
+INSERT INTO subject
+VALUES ("LNG332", "Business English","-");
+INSERT INTO subject
+VALUES ("INT203", "Client-Side Web Programming II","-");
+INSERT INTO subject
+VALUES ("INT204", "Serevr-Side Web Programming II","-");
+INSERT INTO subject
+VALUES ("INT206", "Advanced Database","Internal database structure, indexing, table partitioning, clustering, database replication, query optimization, database security, transaction management and concurrency control.");
+INSERT INTO subject
+VALUES ("INT208", "Network II","-");
+INSERT INTO subject
+VALUES ("INT209", "Development and Operations (DevOps)","DevOps concepts, software development management tools such as Circle CI and Jenkins, container technology, automated deployment tools");
+INSERT INTO subject
+VALUES ("INT210", "Architecture, Integration and Deployment)","-");
+INSERT INTO subject
+VALUES ("INT221", "Integrated Information Technology Project I","-");
+INSERT INTO subject
+VALUES ("LNG308", "Technical Report Writing","-");
+INSERT INTO subject
+VALUES ("INT222", "Integrated Information Technology Project II","-");
+INSERT INTO subject
+VALUES ("INT305", "Semi-structured and Unstructured Data Management","โครงสร้างข้อมูลแบบเอกซ์เอ็มแอล เมต้าดาต้า ข้อมูลแบบกึ่งโครงสร้าง ความแตกต่างระหว่างเอกสารเอกซ์เอ็มแอลที่มีรูปแบบถูกต้อง และเอกสารเอกซ์เอ็มแอลที่ถูกต้องสมบูรณ์ การใช้คำนิยามชนิดเอกสาร การสร้างข้อกำหนดเอกสารสำหรับโครงสร้างข้อมูล เนมสเปซ เอกซ์เอสแอล เอกซ์เอสแอลที เอกซ์พาธ์ท และเอกซ์คิวรี โครงสร้างข้อมูลแบบโนเอสคิวแอล ความแตกต่างระหว่างโนเอสคิวแอลและเอสคิวแอล โนเอสคิวแอลประเภทต่างๆ การเลือกประเภทของโนเอสคิวแอลให้เหมาะกับลักษณะงานที่ต้องการ การจัดเก็บและแลกเปลี่ยนข้อมูลด้วยรูปแบบเจสัน");
+INSERT INTO subject
+VALUES ("INT307", "Security I","-");
+INSERT INTO subject
+VALUES ("INT314", "Applied Mathematics for Data Science","-");
+INSERT INTO subject
+VALUES ("GEN241", "Beauty of Life","-");
+INSERT INTO subject
+VALUES ("LNG320", "Content-based Language Learning","-");
 INSERT INTO subject
 VALUES ("INT308", "SECURITY II","บริการด้านความมั่นคง กลไกและมาตรการตอบโต้การบุกรุก คุณสมบัติด้านความมั่นคง ลักษณะการบุกรุกและวิธีตรวจสอบ ระบบที่เชื่อมั่นได้สูง จุดอ่อน การคุกคามและความเสี่ยง การเข้ารหัสลับเบื้องต้น จุดอ่อนของระบบเว็บและโมบาย");
 INSERT INTO subject
-VALUES ("LNG304", "MEETING AND DISCUSSIONS","รายวิชานี้เน้นการพัฒนาความสามารถของนักศึกษาในการสื่อสาร การมีปฏิสัมพันธ์ในการประชุมหรือการสนทนาอย่างมีประสิทธิภาพ การเขียนรายงานการประชุม นักศึกษาจะได้เรียนรู้คำศัพท์ คำศัพท์เฉพาะที่เกี่ยวกับการประชุมและการสนทนา นักศึกษาจะสามารถใช้วลี หรือสำนวนในที่ประชุมและการสนทนาได้เหมาะสม นอกจากนี้นักศึกษาจะได้แสดงบทบาทสมมุติและได้แสดงบทบาทที่แตกต่างออกไป ในการประชุมและการสนทนา");
+VALUES ("INT319", "Information Technology Professional Practice","-");
+INSERT INTO subject
+VALUES ("INT321", "Information Technology Seminar I","-");
+INSERT INTO subject
+VALUES ("INT339", "Preparation for Career Training","-");
+INSERT INTO subject
+VALUES ("INT340", "Career Training","-");
+INSERT INTO subject
+VALUES ("INT365-371", "Capstone Information Technology Project I","โครงงานรวบยอดเทคโนโลยีสารสนเทศสำหรับนักศึกษาปี 3 เทอม 2 การนำเสนอโครงงาน การศึกษาความเป็นไปได้ การวิเคราะห์และออกแบบ การพัฒนา รายงานและการนำเสนอผลงาน");
+INSERT INTO subject
+VALUES ("GEN351", "Modern Management and Leadership","This course examines the modern management concept including basic functions of managementplanning, organizing, controlling, decision-making, communication, motivation, leadership, human resource management, management of information systems, social responsibilityand its application to particular circumstances.");
+INSERT INTO subject
+VALUES ("INT366-372", "Capstone Information Technology Project II",
+"Information technology capstone project for senior students, continuation of Information Technology capstone Project I (INT 365), complete the implementation, testing, deployment, report and project presentation");
+INSERT INTO subject
+VALUES ("LNG224", "Oral Communication","-");
+INSERT INTO subject
+VALUES ("INT322", "Information Technology Seminar II","-");
+INSERT INTO subject
+VALUES ("LNG304", "Meetings and Discussions","-");
+INSERT INTO subject
+VALUES ("INT350", "Cooperative Study (16 สัปดาห์)","-");
+INSERT INTO subject
+VALUES ("INT370", "Work Integrated Learning (24 สัปดาห์)","-");
 -- insert classes
 INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-("INT510",2566,1,1);
+("INT100",2563,1,1);
 INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-("GEN224",2566,1,1);
+("INT100",2563,1,2);
 INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-("INT371",2566,1,1);
+("INT101",2563,1,1);
 INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-("LNG224",2566,1,1);
+("INT101",2563,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT102",2563,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT102",2563,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT114",2563,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT114",2563,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("GEN101",2563,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("GEN101",2563,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("GEN111",2563,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("GEN111",2563,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG120",2563,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG120",2563,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG220",2563,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG220",2563,1,2);
+
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT103",2563,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT103",2563,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT104",2563,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT104",2563,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT105",2563,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT105",2563,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT107",2563,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT107",2563,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT200",2563,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT200",2563,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG220",2563,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG220",2563,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG202",2563,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG202",2563,2,2);
+
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT201",2564,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT201",2564,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT202",2564,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT202",2564,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT205",2564,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT205",2564,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT207",2564,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT207",2564,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT214",2564,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT214",2564,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("GEN231",2564,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("GEN231",2564,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG202",2564,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG202",2564,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG332",2564,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG332",2564,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT203",2564,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT203",2564,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT204",2564,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT204",2564,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT206",2564,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT206",2564,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT208",2564,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT208",2564,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT209",2564,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT209",2564,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT210",2564,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT210",2564,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT221",2564,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT221",2564,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG308",2564,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG308",2564,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT222",2565,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT222",2565,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT305",2565,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT305",2565,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT307",2565,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT307",2565,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT314",2565,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT314",2565,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("GEN241",2565,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("GEN241",2565,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG320",2565,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG320",2565,1,2);
 INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
 ("INT308",2565,2,1);
 INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT308",2565,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT319",2565,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT319",2565,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT321",2565,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT321",2565,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT339",2565,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT339",2565,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT340",2565,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT340",2565,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT365-371",2565,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT365-371",2565,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
 ("GEN351",2565,2,1);
 INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
-("LNG304",2565,2,1);
+("GEN351",2565,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT350",2565,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT350",2565,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT321",2565,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT321",2565,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT370",2565,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT370",2565,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT366-372",2565,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT366-372",2565,2,2);
+
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT365-371",2566,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT365-371",2566,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG224",2566,1,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG224",2566,1,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT366-372",2566,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT366-372",2566,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT322",2566,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT322",2566,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG304",2566,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("LNG304",2566,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT308",2566,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT308",2566,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT319",2566,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("INT319",2566,2,2);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("GEN351",2566,2,1);
+INSERT INTO classes (`subject_id`,`academic_year`,`semester`,`sec`) VALUES 
+("GEN351",2566,2,2);
 -- insert title
+select * from title;
 INSERT INTO title (`title`,`title_description`,`full_score`)
-VALUES ("การสอบเก็บคะแนนวิชาINT510 ครั้งที่1","เก็บ 15%",100);
+VALUES ("การสอบเก็บคะแนนวิชา INT365/371", "ครั้งที่1 เก็บ15%",30);
 INSERT INTO title (`title`,`title_description`,`full_score`)
-VALUES ("quiz 1","-",5);
+VALUES ("การสอบเก็บคะแนนวิชา INT365/371", "ครั้งที่2 เก็บ30%",60);
 INSERT INTO title (`title`,`title_description`,`full_score`)
-VALUES ("test exam-1","-",100);
+VALUES ("ทดสอบระบบ INT308", "ครั้งที่1",0);
 INSERT INTO title (`title`,`title_description`,`full_score`)
-VALUES ("quiz 1.1","-",10);
+VALUES ("การสอบเก็บคะแนนวิชา INT366/372", "ครั้งที่1 เก็บ60%",100);
 INSERT INTO title (`title`,`title_description`,`full_score`)
-VALUES ("exam quiz DES","-",20);
+VALUES ("การสอบเก็บคะแนนวิชา INT206", "ครั้งที่1 เก็บ10%",30);
+INSERT INTO title (`title`,`title_description`,`full_score`)
+VALUES ("ทดสอบระบบ INT205","-",0);
+INSERT INTO title (`title`,`title_description`,`full_score`)
+VALUES ("ทดสอบระบบ INT204","-",0);
 -- insert enrollments
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500086, 1);
+(63130500086, 32);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500086, 2);
+(63130500086, 34);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500086, 3);
+(63130500086, 36);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500086, 4);
+(63130500086, 38);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500086, 5);
+(63130500086, 50);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500086, 6);
+(63130500086, 58);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500086, 7);
+(63130500086, 64);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500105, 1);
+(63130500086, 68);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500105, 2);
+(63130500086, 90);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500105, 3);
+(63130500086, 98);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500105, 4);
+(63130500086, 102);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500105, 5);
+(63130500086, 107);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500105, 6);
+(63130500086, 110);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500105, 7);
+(63130500105, 32);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500144, 2);
+(63130500105, 34);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500144, 4);
+(63130500105, 36);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500144, 6);
+(63130500105, 38);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500119, 1);
+(63130500105, 50);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500119, 2);
+(63130500105, 58);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500119, 3);
+(63130500105, 64);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500119, 5);
+(63130500105, 68);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500119, 7);
+(63130500105, 90);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500082, 1);
+(63130500105, 98);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500082, 3);
+(63130500105, 102);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500082, 5);
+(63130500105, 107);
 INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500082, 6);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500116, 1);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500116, 2);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500116, 4);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500116, 6);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500123, 1);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500123, 2);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500123, 4);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500123, 6);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500123, 7);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500117, 1);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500117, 2);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500117, 3);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500121, 4);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500121, 5);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500121, 6);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500121, 7);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500134, 1);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500134, 2);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500134, 4);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500134, 6);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500090, 1);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500090, 2);
-INSERT INTO enrollments (`student_id`, `class_id`) VALUES
-(63130500090, 3);
+(63130500105, 110);
+select * from classes
+where subject_id = "INT308";
 -- insert scores
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1,63130500119,1);
+VALUES (20,"-",1,63130500086,98);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1,63130500082,1);
+VALUES (20,"-",1,63130500105,98);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1,63130500116,1);
+VALUES (40,"-",2,63130500086,98);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1,63130500123,1);
+VALUES (40,"-",2,63130500105,98);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1,63130500117,1);
+VALUES (75,"-",4,63130500086,102);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1,63130500090,1);
+VALUES (75,"-",4,63130500105,102);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1,63130500086,1);
+VALUES (30,"-",5,63130500086,52);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (9.99,"ทดลองระบบ",1,63130500105,1);
+VALUES (7,"-",5,63130500105,52);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (5,"quiz 1 full score = 5 ",2,63130500119,2);
+VALUES (0,"test system",6,63130500086,36);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (4,"quiz 1 full score = 5",2,63130500116,2);
+VALUES (0,"test system",6,63130500105,36);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (3,"quiz 1 full score = 5",2,63130500123,2);
+VALUES (0,"ทดสอบระบบ",7,63130500086,50);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (2,"quiz 1 full score = 5",2,63130500117,2);
+VALUES (0,"ทดสอบระบบ",7,63130500105,50);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (1,"quiz 1 full score = 5",2,63130500134,2);
+VALUES (0,"ทดสอบระบบ INT308",3,63130500086,108);
 INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (3.5,"quiz 1 full score = 5",2,63130500090,2);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (2,"quiz 1 full score = 5 ",2,63130500086,2);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (0.5,"quiz 1 full score = 5 ",2,63130500105,2);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (2.75,"quiz 1 full score = 5 ",2,63130500144,2);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (10,"test from exam-1",3,63130500119,3);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (10,"test from exam-1",3,63130500082,3);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (10,"test from exam-1",3,63130500082,3);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (10,"test from exam-1",3,63130500117,3);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (10,"test from exam-1",3,63130500090,3);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (10,"test from exam-1",3,63130500086,3);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (10,"test from exam-1",3,63130500105,3);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (5,"quiz 1.1 full score = 10",4,63130500116,4);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (7,"quiz 1.1 full score = 10",4,63130500123,4);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (1,"quiz 1.1 full score = 10",4,63130500121,4);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (9,"quiz 1.1 full score = 10",4,63130500134,4);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (10,"quiz 1.1 full score = 10",4,63130500086,4);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (7,"quiz 1.1 full score = 10",4,63130500105,4);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (0.75,"quiz 1.1 full score = 10",4,63130500144,4);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (7,"exam quiz DES full = 20",5,63130500105,5);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (20,"exam quiz DES full = 20",5,63130500086,5);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (10.5,"exam quiz DES full = 20",5,63130500119,5);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (4,"exam quiz DES full = 20",5,63130500082,5);
-INSERT INTO scores (`scores`,`note`,`title_id`,`std_id`,`class_id`)
-VALUES (0,"exam quiz DES full = 20",5,63130500121,5);
+VALUES (0,"ทดสอบระบบ INT308",3,63130500105,8);
 -- insert classes_supervisor
 INSERT INTO classes_supervisor VALUES
 (1001,3);
 INSERT INTO classes_supervisor VALUES
-(1002,1);
+(1001,4);
 INSERT INTO classes_supervisor VALUES
-(1002,3);
+(1001,18);
 INSERT INTO classes_supervisor VALUES
-(1003,3);
+(1001,19);
 INSERT INTO classes_supervisor VALUES
-(1003,4);
+(1001,33);
 INSERT INTO classes_supervisor VALUES
-(1004,3);
+(1001,34);
 INSERT INTO classes_supervisor VALUES
-(1004,5);
+(1001,49);
 INSERT INTO classes_supervisor VALUES
-(1005,3);
+(1001,50);
 INSERT INTO classes_supervisor VALUES
-(1006,3);
+(1001,59);
 INSERT INTO classes_supervisor VALUES
-(63130500029,1);
+(1001,60);
 INSERT INTO classes_supervisor VALUES
-(63130500029,2);
+(1001,63);
+INSERT INTO classes_supervisor VALUES
+(1001,64);
+INSERT INTO classes_supervisor VALUES
+(1001,85);
+INSERT INTO classes_supervisor VALUES
+(1001,86);
+INSERT INTO classes_supervisor VALUES
+(1001,95);
+INSERT INTO classes_supervisor VALUES
+(1001,96);
+INSERT INTO classes_supervisor VALUES
+(1001,97);
+INSERT INTO classes_supervisor VALUES
+(1001,98);
+INSERT INTO classes_supervisor VALUES
+(1001,101);
+INSERT INTO classes_supervisor VALUES
+(1001,102);
+INSERT INTO classes_supervisor VALUES
+(1003,21);
+INSERT INTO classes_supervisor VALUES
+(1003,22);
+INSERT INTO classes_supervisor VALUES
+(1003,35);
+INSERT INTO classes_supervisor VALUES
+(1003,36);
+INSERT INTO classes_supervisor VALUES
+(1003,51);
+INSERT INTO classes_supervisor VALUES
+(1003,52);
+INSERT INTO classes_supervisor VALUES
+(1003,59);
+INSERT INTO classes_supervisor VALUES
+(1003,60);
+INSERT INTO classes_supervisor VALUES
+(1003,63);
+INSERT INTO classes_supervisor VALUES
+(1003,64);
+INSERT INTO classes_supervisor VALUES
+(1003,65);
+INSERT INTO classes_supervisor VALUES
+(1003,66);
+INSERT INTO classes_supervisor VALUES
+(1003,85);
+INSERT INTO classes_supervisor VALUES
+(1003,86);
+INSERT INTO classes_supervisor VALUES
+(1003,95);
+INSERT INTO classes_supervisor VALUES
+(1003,96);
+INSERT INTO classes_supervisor VALUES
+(1003,97);
+INSERT INTO classes_supervisor VALUES
+(1003,98);
+INSERT INTO classes_supervisor VALUES
+(1003,101);
+INSERT INTO classes_supervisor VALUES
+(1003,102);
+INSERT INTO classes_supervisor VALUES
+(1005,7);
+INSERT INTO classes_supervisor VALUES
+(1005,8);
+INSERT INTO classes_supervisor VALUES
+(1005,23);
+INSERT INTO classes_supervisor VALUES
+(1005,24);
+INSERT INTO classes_supervisor VALUES
+(1005,25);
+INSERT INTO classes_supervisor VALUES
+(1005,26);
+INSERT INTO classes_supervisor VALUES
+(1005,53);
+INSERT INTO classes_supervisor VALUES
+(1005,54);
+INSERT INTO classes_supervisor VALUES
+(1005,55);
+INSERT INTO classes_supervisor VALUES
+(1005,56);
+INSERT INTO classes_supervisor VALUES
+(1005,57);
+INSERT INTO classes_supervisor VALUES
+(1005,58);
+INSERT INTO classes_supervisor VALUES
+(1005,59);
+INSERT INTO classes_supervisor VALUES
+(1005,60);
+INSERT INTO classes_supervisor VALUES
+(1005,63);
+INSERT INTO classes_supervisor VALUES
+(1005,64);
+INSERT INTO classes_supervisor VALUES
+(1005,67);
+INSERT INTO classes_supervisor VALUES
+(1005,68);
+INSERT INTO classes_supervisor VALUES
+(1005,85);
+INSERT INTO classes_supervisor VALUES
+(1005,86);
+INSERT INTO classes_supervisor VALUES
+(1005,95);
+INSERT INTO classes_supervisor VALUES
+(1005,96);
+INSERT INTO classes_supervisor VALUES
+(1005,97);
+INSERT INTO classes_supervisor VALUES
+(1005,98);
+INSERT INTO classes_supervisor VALUES
+(1005,101);
+INSERT INTO classes_supervisor VALUES
+(1005,102);
+INSERT INTO classes_supervisor VALUES
+(1006,7);
+INSERT INTO classes_supervisor VALUES
+(1006,8);
+INSERT INTO classes_supervisor VALUES
+(1006,23);
+INSERT INTO classes_supervisor VALUES
+(1006,24);
+INSERT INTO classes_supervisor VALUES
+(1006,25);
+INSERT INTO classes_supervisor VALUES
+(1006,26);
+INSERT INTO classes_supervisor VALUES
+(1006,53);
+INSERT INTO classes_supervisor VALUES
+(1006,54);
+INSERT INTO classes_supervisor VALUES
+(1006,55);
+INSERT INTO classes_supervisor VALUES
+(1006,56);
+INSERT INTO classes_supervisor VALUES
+(1006,57);
+INSERT INTO classes_supervisor VALUES
+(1006,58);
+INSERT INTO classes_supervisor VALUES
+(1006,59);
+INSERT INTO classes_supervisor VALUES
+(1006,60);
+INSERT INTO classes_supervisor VALUES
+(1006,63);
+INSERT INTO classes_supervisor VALUES
+(1006,64);
+INSERT INTO classes_supervisor VALUES
+(1006,67);
+INSERT INTO classes_supervisor VALUES
+(1006,68);
+INSERT INTO classes_supervisor VALUES
+(1006,85);
+INSERT INTO classes_supervisor VALUES
+(1006,86);
+INSERT INTO classes_supervisor VALUES
+(1006,95);
+INSERT INTO classes_supervisor VALUES
+(1006,96);
+INSERT INTO classes_supervisor VALUES
+(1006,97);
+INSERT INTO classes_supervisor VALUES
+(1006,98);
+INSERT INTO classes_supervisor VALUES
+(1006,101);
+INSERT INTO classes_supervisor VALUES
+(1006,102);
 INSERT INTO classes_supervisor VALUES
 (63130500029,3);
 INSERT INTO classes_supervisor VALUES
-(63130500029,5);
+(63130500029,4);
+INSERT INTO classes_supervisor VALUES
+(63130500029,18);
+INSERT INTO classes_supervisor VALUES
+(63130500029,19);
+INSERT INTO classes_supervisor VALUES
+(63130500029,33);
+INSERT INTO classes_supervisor VALUES
+(63130500029,34);
+INSERT INTO classes_supervisor VALUES
+(63130500029,49);
+INSERT INTO classes_supervisor VALUES
+(63130500029,50);
+INSERT INTO classes_supervisor VALUES
+(63130500029,59);
+INSERT INTO classes_supervisor VALUES
+(63130500029,60);
+INSERT INTO classes_supervisor VALUES
+(63130500029,63);
+INSERT INTO classes_supervisor VALUES
+(63130500029,64);
+INSERT INTO classes_supervisor VALUES
+(63130500029,85);
+INSERT INTO classes_supervisor VALUES
+(63130500029,86);
+INSERT INTO classes_supervisor VALUES
+(63130500029,95);
+INSERT INTO classes_supervisor VALUES
+(63130500029,96);
+INSERT INTO classes_supervisor VALUES
+(63130500029,97);
+INSERT INTO classes_supervisor VALUES
+(63130500029,98);
+INSERT INTO classes_supervisor VALUES
+(63130500029,101);
+INSERT INTO classes_supervisor VALUES
+(63130500029,102);
 -- insert staff_supervisor
-INSERT INTO staff_supervisor
-VALUES (1,01);
-INSERT INTO staff_supervisor
-VALUES (2,02);
-INSERT INTO staff_supervisor
-VALUES (3,03);
-INSERT INTO staff_supervisor
-VALUES (4,01);
-INSERT INTO staff_supervisor
-VALUES (5,02);
-INSERT INTO staff_supervisor
-VALUES (6,03);
-INSERT INTO staff_supervisor
-VALUES (7,01);
+-- INSERT INTO staff_supervisor
+-- VALUES (1,01);
+-- INSERT INTO staff_supervisor
+-- VALUES (2,02);
+-- INSERT INTO staff_supervisor
+-- VALUES (3,03);
+-- INSERT INTO staff_supervisor
+-- VALUES (4,01);
+-- INSERT INTO staff_supervisor
+-- VALUES (5,02);
+-- INSERT INTO staff_supervisor
+-- VALUES (6,03);
+-- INSERT INTO staff_supervisor
+-- VALUES (7,01);
