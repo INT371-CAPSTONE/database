@@ -242,13 +242,13 @@ VALUES (63130500808, "Sophia", "Roberts" );
 -- insert admin profile
 INSERT INTO admin_profile 
 (`admin_firstname`, `admin_lastname`, `admin_username`, `admin_password`) VALUES
-('sasit_1', 'admin', 'sasit1_admin', 'password123');
+('sasit_1', 'admin', 'sasit1_admin', 'U2FsdGVkX18hY6+HwKlDdRSwcEXQUAOnNEyQ1qss4S4=');
 INSERT INTO admin_profile 
 (`admin_firstname`, `admin_lastname`, `admin_username`, `admin_password`) VALUES
-('sasit_2', 'admin', 'sasit2_admin', 'password123');
+('sasit_2', 'admin', 'sasit2_admin', 'U2FsdGVkX18hY6+HwKlDdRSwcEXQUAOnNEyQ1qss4S4=');
 INSERT INTO admin_profile 
 (`admin_firstname`, `admin_lastname`, `admin_username`, `admin_password`) VALUES
-('sasit_3', 'admin', 'sasit3_admin', 'password123');
+('sasit_3', 'admin', 'sasit3_admin', 'U2FsdGVkX18hY6+HwKlDdRSwcEXQUAOnNEyQ1qss4S4=');
 -- insert subject
 INSERT INTO subject
 VALUES ("INT100", "Information Technology Fundamentals","-");
